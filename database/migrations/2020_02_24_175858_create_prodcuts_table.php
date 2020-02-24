@@ -15,6 +15,12 @@ class CreateProdcutsTable extends Migration
     {
         Schema::create('prodcuts', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->text('detail');
+            $table->integer('price');
+            $table->integer('stock');
+            $table->integer('discount');
+
             $table->timestamps();
         });
     }
